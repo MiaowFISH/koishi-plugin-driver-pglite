@@ -2,10 +2,27 @@
   "name": "koishi-plugin-driver-pglite",
   "description": "",
   "version": "0.0.1",
-  "main": "lib/index.js",
+  "type": "module",
+  "main": "lib/index.cjs",
+  "module": "lib/index.mjs",
   "typings": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    },
+    "./Database": {
+      "types": "./lib/Database.d.ts",
+      "import": "./lib/Database.mjs",
+      "require": "./lib/Database.cjs"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
   "files": [
     "lib",
+    "src",
     "dist"
   ],
   "license": "MIT",
@@ -16,12 +33,14 @@
   ],
   "peerDependencies": {
     "@minatojs/sql-utils": "^5.5.0",
+    "cordis": "^3.18.1",
     "cosmokit": "^1.8.0",
     "koishi": "^4.18.9",
     "minato": "^3.6.1"
   },
   "devDependencies": {
     "@minatojs/sql-utils": "^5.5.0",
+    "cordis": "^3.18.1",
     "cosmokit": "^1.8.0",
     "minato": "^3.6.1"
   },
