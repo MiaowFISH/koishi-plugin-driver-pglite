@@ -1,6 +1,6 @@
-import { Tables as MTables, Types as MTypes } from 'koishi';
+import { Context, Tables as MTables, Types as MTypes } from 'koishi';
 import PGliteDriver from "../src";
-import { Database } from "./Database";
+import { Database } from "../src/Database";
 
 interface Tables extends MTables {
     document: {

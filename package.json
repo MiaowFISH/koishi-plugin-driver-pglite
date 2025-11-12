@@ -1,5 +1,5 @@
 {
-  "name": "koishi-plugin-driver-pglite",
+  "name": "@yesimbot/vector-driver-pglite",
   "description": "",
   "version": "0.0.1",
   "type": "module",

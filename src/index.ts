@@ -1,11 +1,11 @@
 import { PGlite, PGliteOptions } from '@electric-sql/pglite'
 import { vector } from '@electric-sql/pglite/vector'
+import { isBracketed } from '@minatojs/sql-utils'
 import { Binary, Dict, difference, isNullable, makeArray, pick } from 'cosmokit'
 import { Driver, Eval, executeUpdate, Field, Selection, z } from 'minato'
-import { isBracketed } from '@minatojs/sql-utils'
 import { escapeId, formatTime, PGliteBuilder } from './builder'
-import zhCN from './locales/zh-CN.yml'
 import enUS from './locales/en-US.yml'
+import zhCN from './locales/zh-CN.yml'
 
 interface ColumnInfo {
   table_catalog: string
