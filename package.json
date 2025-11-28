@@ -1,25 +1,9 @@
 {
-  "name": "@yesimbot/vector-driver-pglite",
+  "name": "@yesimbot/koishi-plugin-pglite",
   "description": "",
   "version": "0.0.1",
-  "type": "module",
-  "main": "lib/index.cjs",
-  "module": "lib/index.mjs",
+  "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./lib/index.d.ts",
-      "import": "./lib/index.mjs",
-      "require": "./lib/index.cjs"
-    },
-    "./Database": {
-      "types": "./lib/Database.d.ts",
-      "import": "./lib/Database.mjs",
-      "require": "./lib/Database.cjs"
-    },
-    "./src/*": "./src/*",
-    "./package.json": "./package.json"
-  },
   "files": [
     "lib",
     "src",
@@ -36,15 +20,26 @@
     "cordis": "^3.18.1",
     "cosmokit": "^1.8.0",
     "koishi": "^4.18.9",
+    "koishi-plugin-yesimbot": "^3.0.3",
     "minato": "^3.6.1"
   },
   "devDependencies": {
     "@minatojs/sql-utils": "^5.5.0",
     "cordis": "^3.18.1",
     "cosmokit": "^1.8.0",
+    "koishi": "^4.18.9",
+    "koishi-plugin-yesimbot": "^3.0.3",
     "minato": "^3.6.1"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.3.12"
+  },
+  "koishi": {
+    "description": {},
+    "service": {
+      "implements": [
+        "vector-driver"
+      ]
+    }
   }
 }
